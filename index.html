@@ -1,230 +1,333 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Concientización Juvenil</title>
-<style>
-body { font-family: Arial, sans-serif; margin: 0; background-color: #f4f4f4; color: #333; }
-header { background-color: #6a1b9a; color: white; padding: 15px; text-align: center; }
-nav { background-color: #8e24aa; padding: 10px; text-align: center; }
-nav a { color: white; margin: 0 10px; text-decoration: none; font-weight: bold; }
-nav a:hover { text-decoration: underline; }
-section { padding: 20px; margin: 10px; background-color: white; border-radius: 10px; }
-footer { text-align: center; padding: 10px; background-color: #6a1b9a; color: white; }
-.btn { background:#6a1b9a;color:#fff;border:none;padding:10px;border-radius:8px;cursor:pointer; }
-h2 { color:#6a1b9a; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concientización Juvenil | Relaciones Sanas y Prevención</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            margin: 0; 
+            background-color: #f4f4f4; 
+            color: #333; 
+            line-height: 1.6;
+        }
+        header { 
+            background: linear-gradient(135deg, #6a1b9a, #8e24aa); 
+            color: white; 
+            padding: 40px 20px; 
+            text-align: center;
+        }
+        nav { 
+            background-color: #8e24aa; 
+            padding: 15px; 
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav a { 
+            color: white; 
+            margin: 0 15px; 
+            text-decoration: none; 
+            font-weight: bold;
+        }
+        nav a:hover { text-decoration: underline; }
+        
+        section { 
+            padding: 30px; 
+            margin: 20px auto; 
+            max-width: 1100px;
+            background-color: white; 
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        h1 { margin: 0; font-size: 2.5em; }
+        h2 { color: #6a1b9a; border-bottom: 3px solid #8e24aa; padding-bottom: 10px; }
+        h3 { color: #8e24aa; }
+        
+        .btn { 
+            background: #6a1b9a; 
+            color: #fff; 
+            border: none; 
+            padding: 12px 25px; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            font-size: 1.1em;
+            transition: all 0.3s;
+        }
+        .btn:hover { background: #8e24aa; transform: scale(1.05); }
+        
+        img { 
+            max-width: 100%; 
+            border-radius: 10px; 
+            margin: 15px 0; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        
+        footer { 
+            text-align: center; 
+            padding: 20px; 
+            background-color: #6a1b9a; 
+            color: white; 
+            margin-top: 30px;
+        }
+        
+        .card {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #8e24aa;
+        }
+    </style>
 </head>
 <body>
 
 <header>
-<h1>Concientización sobre Problemas Juveniles</h1>
-<p>Infórmate y toma decisiones responsables</p>
+    <h1>🛡️ Concientización Juvenil</h1>
+    <p>Relaciones sanas • Prevención • Decisiones responsables</p>
+    <p><strong>Infórmate, protégete y cuida tu futuro</strong></p>
 </header>
 
 <nav>
-<a href="#embarazo">Embarazo Adolescente</a>
-<a href="#violencia">Violencia en el Noviazgo</a>
-<a href="#prevencion">Prevención</a>
-<a href="#senales">Señales de alerta</a>
-<a href="#estadisticas">Estadísticas</a>
-<a href="#test">Ir al Test</a>
-<a href="#recursos">Recursos</a>
+    <a href="#embarazo">Embarazo Adolescente</a>
+    <a href="#violencia">Violencia en el Noviazgo</a>
+    <a href="#prevencion">Prevención</a>
+    <a href="#senales">Señales de Alerta</a>
+    <a href="#estadisticas">Estadísticas</a>
+    <a href="#test">Test: ¿Tu relación es sana?</a>
+    <a href="#recursos">Recursos y Ayuda</a>
 </nav>
 
 <section id="embarazo">
-<h2>Embarazo Adolescente</h2>
-<p>El embarazo adolescente es un fenómeno social y de salud pública que ocurre cuando una persona menor de 19 años queda embarazada. Puede afectar el desarrollo educativo, emocional y económico de quienes lo viven.</p>
+    <h2>Embarazo Adolescente</h2>
+    <img src="https://picsum.photos/id/1015/800/400" alt="Jóvenes conversando sobre salud sexual" style="width:100%;">
+    
+    <p>El embarazo en la adolescencia es un tema de salud pública importante en México. Ocurre cuando una persona menor de 19 años queda embarazada, afectando su educación, salud emocional y oportunidades futuras.</p>
+    
+    <div class="grid">
+        <div class="card">
+            <h3>Causas principales</h3>
+            <ul>
+                <li>Falta de educación sexual integral</li>
+                <li>Presión de pareja o entorno social</li>
+                <li>Desinformación sobre anticonceptivos</li>
+                <li>Inicio temprano de relaciones sin protección</li>
+                <li>Violencia sexual (factor creciente)</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Consecuencias</h3>
+            <ul>
+                <li>Abandono o rezago escolar</li>
+                <li>Mayor riesgo de salud para madre y bebé</li>
+                <li>Dificultades económicas</li>
+                <li>Ansiedad, depresión y estrés</li>
+            </ul>
+        </div>
+    </div>
 
-<h3>Causas principales:</h3>
-<ul>
-<li>Falta de educación sexual integral</li>
-<li>Presión de pareja o del entorno social</li>
-<li>Desinformación sobre métodos anticonceptivos</li>
-<li>Inicio temprano de relaciones sexuales sin protección</li>
-</ul>
-
-<h3>Consecuencias:</h3>
-<ul>
-<li>Abandono escolar o dificultades académicas</li>
-<li>Problemas de salud para la madre y el bebé</li>
-<li>Limitaciones económicas</li>
-<li>Impacto emocional como ansiedad o estrés</li>
-</ul>
-
-<h3>Importancia de la educación:</h3>
-<p>Contar con información clara y acceso a servicios de salud permite tomar decisiones responsables y prevenir embarazos no planeados.</p>
-
-<h3>Más información:</h3>
-<ul>
-<li><a href="https://www.who.int/es/news-room/fact-sheets/detail/adolescent-pregnancy" target="_blank">OMS</a></li>
-<li><a href="https://www.unicef.org/mexico/embarazo-adolescente" target="_blank">UNICEF México</a></li>
-</ul>
+    <h3>Datos actualizados en México</h3>
+    <p>En 2024 se registraron aproximadamente <strong>89,527 nacimientos</strong> de madres entre 10 y 17 años. La tasa de fecundidad adolescente ha disminuido, pero sigue siendo alta en varios estados.</p>
+    
+    <h3>Más información:</h3>
+    <ul>
+        <li><a href="https://www.who.int/es/news-room/fact-sheets/detail/adolescent-pregnancy" target="_blank">OMS - Embarazo Adolescente</a></li>
+        <li><a href="https://www.unicef.org/mexico/embarazo-adolescente" target="_blank">UNICEF México</a></li>
+    </ul>
 </section>
 
 <section id="violencia">
-<h2>Violencia en el Noviazgo</h2>
-<p>La violencia en el noviazgo se refiere a cualquier conducta que cause daño físico, emocional o psicológico dentro de una relación afectiva.</p>
-
-<h3>Tipos de violencia:</h3>
-<ul>
-<li>Física: golpes, empujones</li>
-<li>Emocional: insultos, humillaciones</li>
-<li>Psicológica: manipulación, control</li>
-<li>Digital: revisión de redes, acoso en línea</li>
-</ul>
-
-<h3>Factores de riesgo:</h3>
-<ul>
-<li>Baja autoestima</li>
-<li>Celos excesivos</li>
-<li>Normalización de la violencia</li>
-<li>Falta de comunicación</li>
-</ul>
-
-<h3>Consecuencias:</h3>
-<ul>
-<li>Depresión o ansiedad</li>
-<li>Aislamiento social</li>
-<li>Daño físico o psicológico</li>
-</ul>
-
-<h3>Más información:</h3>
-<ul>
-<li><a href="https://www.gob.mx/inmujeres" target="_blank">INMUJERES</a></li>
-<li><a href="https://www.unwomen.org/es" target="_blank">ONU Mujeres</a></li>
-</ul>
+    <h2>Violencia en el Noviazgo</h2>
+    <img src="https://picsum.photos/id/1027/800/400" alt="Pareja joven conversando" style="width:100%;">
+    
+    <p>La violencia en el noviazgo es cualquier conducta que cause daño físico, emocional, psicológico o sexual en una relación afectiva. <strong>No es amor, es violencia.</strong></p>
+    
+    <h3>Tipos de violencia</h3>
+    <div class="grid">
+        <div><strong>Física:</strong> Golpes, empujones</div>
+        <div><strong>Emocional/Psicológica:</strong> Insultos, control, manipulación</div>
+        <div><strong>Sexual:</strong> Presión para actos no deseados</div>
+        <div><strong>Digital:</strong> Acoso en redes, control de celular</div>
+    </div>
+    
+    <h3>Datos en México</h3>
+    <p>Alrededor del <strong>60%</strong> de las adolescentes de 15-17 años en una relación han sufrido algún tipo de violencia en el noviazgo. La psicológica es la más común.<grok:render card_id="68abbf" card_type="citation_card" type="render_inline_citation"><argument name="citation_id">1</argument></grok:render><grok:render card_id="036723" card_type="citation_card" type="render_inline_citation"><argument name="citation_id">0</argument></grok:render></p>
+    
+    <h3>Más información:</h3>
+    <ul>
+        <li><a href="https://www.gob.mx/inmujeres" target="_blank">INMUJERES</a></li>
+        <li><a href="https://www.unwomen.org/es" target="_blank">ONU Mujeres</a></li>
+    </ul>
 </section>
 
 <section id="prevencion">
-<h2>Prevención</h2>
-<p>La prevención es clave para evitar estos problemas. Se basa en la educación, la comunicación y el respeto.</p>
-<ul>
-<li>Educación sexual desde temprana edad</li>
-<li>Uso correcto y constante de métodos anticonceptivos</li>
-<li>Relaciones basadas en el respeto, la confianza y la igualdad</li>
-<li>Comunicación abierta con familia, amigos o adultos de confianza</li>
-<li>Informarse en fuentes confiables y acudir a servicios de salud</li>
-<li>Aprender a establecer límites personales</li>
-</ul>
-<p>Prevenir también implica desarrollar habilidades emocionales como la autoestima, la toma de decisiones y la responsabilidad afectiva.</p>
+    <h2>Prevención: Clave para un Futuro Mejor</h2>
+    <img src="https://picsum.photos/id/201/800/400" alt="Jóvenes en taller educativo" style="width:100%;">
+    
+    <ul>
+        <li>Educación sexual completa y desde temprana edad</li>
+        <li>Uso correcto y constante de métodos anticonceptivos</li>
+        <li>Relaciones basadas en respeto, igualdad y consentimiento</li>
+        <li>Comunicación abierta con personas de confianza</li>
+        <li>Desarrollo de autoestima y límites personales</li>
+        <li>Identificar y rechazar relaciones tóxicas</li>
+    </ul>
+    
+    <p><strong>Recuerda:</strong> Una relación sana te hace sentir libre, respetado/a y feliz. No controlado/a ni con miedo.</p>
 </section>
 
 <section id="senales">
-<h2>Señales de alerta</h2>
-<p>Reconocer señales puede prevenir situaciones graves y ayudar a buscar apoyo a tiempo.</p>
-<ul>
-<li>Celos excesivos o desconfianza constante</li>
-<li>Control sobre redes sociales o amistades</li>
-<li>Aislamiento de amigos o familia</li>
-<li>Insultos, humillaciones o burlas</li>
-<li>Revisar el celular sin permiso</li>
-<li>Manipulación emocional (hacer sentir culpa o miedo)</li>
-<li>Amenazas o cambios bruscos de comportamiento</li>
-</ul>
-<p>Si identificas varias de estas señales, es importante hablar con alguien de confianza o buscar ayuda profesional.</p>
+    <h2>Señales de Alerta</h2>
+    <img src="https://picsum.photos/id/1005/800/400" alt="Señales de alerta en relaciones" style="width:100%;">
+    
+    <ul>
+        <li>Celos excesivos o desconfianza constante</li>
+        <li>Control sobre amistades, redes o salidas</li>
+        <li>Aislamiento de tu círculo cercano</li>
+        <li>Insultos, humillaciones o burlas</li>
+        <li>Revisar tu celular o mensajes sin permiso</li>
+        <li>Manipulación emocional (culpa, miedo)</li>
+        <li>Amenazas o cambios bruscos de humor</li>
+    </ul>
+    <p><strong>Si ves varias de estas señales, busca ayuda inmediatamente.</strong></p>
 </section>
 
 <section id="estadisticas">
-<h2>Estadísticas</h2>
-<p>Estas gráficas representan de forma visual la situación de los jóvenes respecto a estos temas:</p>
+    <h2>Estadísticas México</h2>
+    <p>Estas gráficas muestran la realidad actual:</p>
+    
+    <canvas id="grafica1" width="600" height="300"></canvas>
+    <p><strong>Embarazo Adolescente:</strong> Distribución aproximada por edad (datos referenciales)</p>
+    
+    <canvas id="grafica2" width="600" height="300"></canvas>
+    <p><strong>Violencia en el Noviazgo:</strong> Porcentajes aproximados</p>
+</section>
 
-<canvas id="grafica1" width="400" height="200"></canvas>
-<br>
-<canvas id="grafica2" width="400" height="200"></canvas>
+<section id="test">
+    <h2>Test: ¿Tu relación es sana?</h2>
+    <p>Responde con sinceridad (5 preguntas):</p>
+    
+    <form id="quiz">
+        <div class="card">
+            <p>1. ¿Tu pareja respeta tus decisiones y opiniones?</p>
+            <label><input type="radio" name="q1" value="1"> Sí</label><br>
+            <label><input type="radio" name="q1" value="0"> No</label>
+        </div>
+        
+        <div class="card">
+            <p>2. ¿Te sientes libre de hablar con amigos/as y familia?</p>
+            <label><input type="radio" name="q2" value="1"> Sí</label><br>
+            <label><input type="radio" name="q2" value="0"> No</label>
+        </div>
+        
+        <div class="card">
+            <p>3. ¿Tu pareja revisa tu celular o redes sin permiso?</p>
+            <label><input type="radio" name="q3" value="0"> Sí</label><br>
+            <label><input type="radio" name="q3" value="1"> No</label>
+        </div>
+        
+        <div class="card">
+            <p>4. ¿Tu pareja te apoya en tus metas y proyectos?</p>
+            <label><input type="radio" name="q4" value="1"> Sí</label><br>
+            <label><input type="radio" name="q4" value="0"> No</label>
+        </div>
+        
+        <div class="card">
+            <p>5. ¿Has sentido miedo o ansiedad por la relación?</p>
+            <label><input type="radio" name="q5" value="0"> Sí</label><br>
+            <label><input type="radio" name="q5" value="1"> No</label>
+        </div>
+        
+        <br>
+        <button type="button" class="btn" onclick="evaluar()">Ver resultado</button>
+    </form>
+    
+    <p id="resultado" style="font-size:1.3em; margin-top:20px; font-weight:bold;"></p>
+</section>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<section id="recursos">
+    <h2>Recursos y Líneas de Ayuda</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Emergencias</h3>
+            <p><strong>911</strong> - Emergencias</p>
+        </div>
+        <div class="card">
+            <h3>Violencia de Género</h3>
+            <ul>
+                <li><a href="https://www.gob.mx/inmujeres" target="_blank">INMUJERES</a></li>
+                <li>Línea Nacional contra la Violencia: <strong>800 108 7273</strong></li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Salud Sexual</h3>
+            <ul>
+                <li>Secretaría de Salud</li>
+                <li>Centros de Salud Juvenil (gratuitos)</li>
+                <li><a href="https://www.unicef.org/mexico/" target="_blank">UNICEF México</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Concientización Juvenil • Creado para informar y proteger a los jóvenes de México</p>
+    <p>Comparte esta información. Tu voz puede ayudar a alguien.</p>
+</footer>
+
 <script>
-// Gráfica 1: Embarazo adolescente
+// Gráfica 1: Embarazo Adolescente (aprox.)
 new Chart(document.getElementById('grafica1'), {
     type: 'bar',
     data: {
         labels: ['15-17 años', '18-19 años'],
         datasets: [{
-            label: 'Casos aproximados (%)',
-            data: [30, 70],
+            label: 'Distribución aproximada de casos (%)',
+            data: [45, 55],
             backgroundColor: ['#8e24aa', '#6a1b9a']
         }]
-    }
+    },
+    options: { responsive: true, plugins: { legend: { display: true } } }
 });
 
-// Gráfica 2: Violencia en el noviazgo
+// Gráfica 2: Violencia en el Noviazgo
 new Chart(document.getElementById('grafica2'), {
     type: 'pie',
     data: {
-        labels: ['Sin violencia', 'Violencia leve', 'Violencia grave'],
+        labels: ['Sin violencia', 'Violencia psicológica/emocional', 'Violencia física/sexual'],
         datasets: [{
-            data: [40, 35, 25],
+            data: [40, 45, 15],
             backgroundColor: ['#4caf50', '#ff9800', '#f44336']
+        }]
+    },
+    options: { responsive: true }
+});
 
-<section id="test">
-<h2>Test: ¿Tu relación es sana?</h2>
-<p>Responde con sinceridad:</p>
-
-<form id="quiz">
-<p>1. ¿Tu pareja respeta tus decisiones?</p>
-<label><input type="radio" name="q1" value="1"> Sí</label>
-<label><input type="radio" name="q1" value="0"> No</label>
-
-<p>2. ¿Te sientes libre de hablar con otras personas?</p>
-<label><input type="radio" name="q2" value="1"> Sí</label>
-<label><input type="radio" name="q2" value="0"> No</label>
-
-<p>3. ¿Tu pareja revisa tu celular sin permiso?</p>
-<label><input type="radio" name="q3" value="0"> Sí</label>
-<label><input type="radio" name="q3" value="1"> No</label>
-
-<p>4. ¿Tu pareja te apoya en tus metas?</p>
-<label><input type="radio" name="q4" value="1"> Sí</label>
-<label><input type="radio" name="q4" value="0"> No</label>
-
-<p>5. ¿Has sentido miedo en tu relación?</p>
-<label><input type="radio" name="q5" value="0"> Sí</label>
-<label><input type="radio" name="q5" value="1"> No</label>
-
-<br><br>
-<button type="button" class="btn" onclick="evaluar()">Ver resultado</button>
-</form>
-
-<p id="resultado"></p>
-</section>
-
-<section id="recursos">
-<h2>Recursos</h2>
-<ul>
-<li><a href="https://www.gob.mx/salud" target="_blank">Secretaría de Salud</a></li>
-<li><a href="https://www.gob.mx/inmujeres" target="_blank">INMUJERES</a></li>
-<li><a href="https://www.unicef.org" target="_blank">UNICEF</a></li>
-</ul>
-</section>
-
-<footer>
-<p>© 2026 Concientización Juvenil</p>
-</footer>
-
-<script>
 function evaluar() {
-let total = 0;
-let respuestas = document.querySelectorAll('input[type=radio]:checked');
-
-if (respuestas.length < 5) {
- document.getElementById('resultado').textContent = 'Responde todas las preguntas ⚠️';
- return;
-}
-
-respuestas.forEach(r => total += parseInt(r.value));
-
-if (total >= 5) {
- document.getElementById('resultado').textContent = 'Relación sana 💚';
-} else if (total >= 3) {
- document.getElementById('resultado').textContent = 'Hay señales de alerta ⚠️';
-} else {
- document.getElementById('resultado').textContent = 'Relación poco saludable 🚨';
-}
+    let total = 0;
+    let respuestas = document.querySelectorAll('input[type=radio]:checked');
+    
+    if (respuestas.length < 5) {
+        document.getElementById('resultado').innerHTML = '⚠️ Responde todas las preguntas';
+        return;
+    }
+    
+    respuestas.forEach(r => total += parseInt(r.value));
+    
+    let resultado = document.getElementById('resultado');
+    if (total >= 5) {
+        resultado.innerHTML = '✅ <span style="color:#4caf50">¡Relación sana! Sigue cuidándola 💚</span>';
+    } else if (total >= 3) {
+        resultado.innerHTML = '⚠️ <span style="color:#ff9800">Hay señales de alerta. Habla con alguien de confianza.</span>';
+    } else {
+        resultado.innerHTML = '🚨 <span style="color:#f44336">Relación poco saludable. Busca ayuda profesional.</span>';
+    }
 }
 </script>
 
 </body>
 </html>
-
